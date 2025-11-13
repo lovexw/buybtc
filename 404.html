@@ -19,20 +19,20 @@
         .error-code {
             font-size: 120px;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--accent);
             margin-bottom: 20px;
             line-height: 1;
         }
 
         .error-title {
             font-size: 32px;
-            color: var(--secondary-color);
+            color: var(--primary);
             margin-bottom: 15px;
         }
 
         .error-description {
             font-size: 16px;
-            color: var(--text-light);
+            color: var(--text);
             margin-bottom: 40px;
             max-width: 500px;
         }
@@ -50,28 +50,28 @@
 
         .return-link {
             display: inline-block;
-            background: var(--primary-color);
+            background: var(--accent);
             color: white;
             padding: 12px 30px;
-            border-radius: 6px;
+            border-radius: var(--radius-sm);
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: all var(--transition-normal) ease;
             margin: 10px;
         }
 
         .return-link:hover {
-            background: #16a34a;
+            background: #E68A00;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
         }
 
         .return-link.secondary {
-            background: var(--accent-color);
+            background: var(--primary);
         }
 
         .return-link.secondary:hover {
-            background: #2563eb;
+            background: #2A2A2A;
         }
 
         .links-container {
@@ -87,9 +87,12 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-brand">
-                <h1>🪙 购买比特币指南</h1>
-            </div>
+            <a href="index.html" class="navbar-brand">
+                <img src="https://tc.xiaowuleyi.com/file/1762677135128_bitcoin-btc-logo.svg" alt="Bitcoin Logo">
+                <div>
+                    <h1>购买比特币指南</h1>
+                </div>
+            </a>
             <div class="navbar-menu">
                 <a href="index.html" class="nav-link">返回首页</a>
             </div>
@@ -111,12 +114,12 @@
                     <a href="#" onclick="history.back(); return false;" class="return-link secondary">返回上一页</a>
                 </div>
 
-                <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border-color); text-align: center; color: var(--text-light);">
+                <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border); text-align: center; color: var(--text);">
                     <p>可能你想找：</p>
                     <ul style="list-style: none; margin: 15px 0;">
-                        <li><a href="index.html" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">📚 购买比特币教程</a></li>
-                        <li><a href="security-guide.html" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">🔒 安全指南</a></li>
-                        <li><a href="resources.html" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">📎 资源和邀请</a></li>
+                        <li><a href="index.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">购买比特币教程</a></li>
+                        <li><a href="security-guide.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">安全指南</a></li>
+                        <li><a href="resources.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">资源和邀请</a></li>
                     </ul>
                 </div>
             </div>

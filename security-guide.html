@@ -8,45 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .checklist-section {
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
-            margin: 20px 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
         .checklist-section h3 {
-            color: var(--secondary-color);
+            color: var(--primary);
             font-size: 20px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        .checklist-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            padding: 12px;
-            background: var(--light-bg);
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .checklist-item:hover {
-            background: #f0fdf4;
-            transform: translateX(5px);
-        }
-
-        .checklist-item input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            margin-right: 15px;
-            cursor: pointer;
-            accent-color: var(--primary-color);
-            flex-shrink: 0;
-            margin-top: 2px;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-xs);
+            border-bottom: 2px solid var(--accent);
         }
 
         .checklist-item label {
@@ -171,10 +138,13 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-brand">
-                <h1>🔒 安全指南</h1>
-                <p class="subtitle">详细的安全检查清单和最佳实践</p>
-            </div>
+            <a href="index.html" class="navbar-brand">
+                <img src="https://tc.xiaowuleyi.com/file/1762677135128_bitcoin-btc-logo.svg" alt="Bitcoin Logo">
+                <div>
+                    <h1>安全指南</h1>
+                    <span class="subtitle">详细的安全检查清单和最佳实践</span>
+                </div>
+            </a>
             <div class="navbar-menu">
                 <a href="index.html" class="nav-link">教程</a>
                 <a href="resources.html" class="nav-link">资源</a>

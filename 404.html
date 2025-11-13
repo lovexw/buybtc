@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - 404</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 200px);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .error-title {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .error-description {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .error-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .return-link {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .return-link:hover {
+            background: #ff9e1b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(247, 147, 26, 0.3);
+        }
+
+        .return-link.secondary {
+            background: var(--accent-color);
+        }
+
+        .return-link.secondary:hover {
+            background: #3182ce;
+        }
+
+        .links-container {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>🪙 购买比特币指南</h1>
+            </div>
+            <div class="navbar-menu">
+                <a href="index.html" class="nav-link">返回首页</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="error-container">
+                <div class="error-emoji">😅</div>
+                <div class="error-code">404</div>
+                <h1 class="error-title">页面未找到</h1>
+                <p class="error-description">
+                    抱歉，你访问的页面不存在或已被移除。这可能是一个断开的链接。
+                </p>
+
+                <div class="links-container">
+                    <a href="index.html" class="return-link">回到首页</a>
+                    <a href="#" onclick="history.back(); return false;" class="return-link secondary">返回上一页</a>
+                </div>
+
+                <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border-color); text-align: center; color: var(--text-light);">
+                    <p>可能你想找：</p>
+                    <ul style="list-style: none; margin: 15px 0;">
+                        <li><a href="index.html" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">📚 购买比特币教程</a></li>
+                        <li><a href="security-guide.html" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">🔒 安全指南</a></li>
+                        <li><a href="resources.html" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">📎 资源和邀请</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 中国大陆用户购买比特币教程。仅供学习使用。</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="购买比特币所需的资源和邀请链接">
+    <title>资源和邀请链接</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .resource-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .resource-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .resource-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .resource-link {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .resource-link:hover {
+            background: #ff9e1b;
+        }
+
+        .resource-link.secondary {
+            background: var(--accent-color);
+        }
+
+        .resource-link.secondary:hover {
+            background: #3182ce;
+        }
+
+        .invite-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #ff9e1b 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .invite-box h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .invite-code {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .copy-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .copy-btn.copied {
+            background: var(--success-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>🔗 资源和邀请</h1>
+                <p class="subtitle">所有所需的链接和资源</p>
+            </div>
+            <div class="navbar-menu">
+                <a href="index.html" class="nav-link">教程</a>
+                <a href="security-guide.html" class="nav-link">🔒 安全指南</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- 邀请部分 -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>欢迎加入我们的社区</h2>
+                    <p>使用下方邀请链接注册交易所，你和我都能获得优惠和返佣。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 交易所邀请 -->
+        <section class="steps-section">
+            <div class="container">
+                <h2>交易所邀请链接</h2>
+                
+                <!-- 欧易邀请 -->
+                <div class="invite-box">
+                    <div class="resource-icon">🎯</div>
+                    <h2>欧易 (OKX) 邀请</h2>
+                    <p>使用邀请码注册，享受交易手续费优惠</p>
+                    <div class="invite-code" id="okx-code">
+                        邀请码: [此处应填入实际邀请码]
+                    </div>
+                    <p style="font-size: 14px; opacity: 0.9;">或访问: https://www.okx.com/join/[邀请码]</p>
+                    <button class="copy-btn" onclick="copyToClipboard('okx-code')">复制邀请码</button>
+                </div>
+
+                <!-- 币安邀请 -->
+                <div class="invite-box" style="background: linear-gradient(135deg, #f3ba2f 0%, #ffd700 100%);">
+                    <div class="resource-icon">💰</div>
+                    <h2>币安 (Binance) 邀请</h2>
+                    <p>新用户注册送交易手续费返佣</p>
+                    <div class="invite-code" id="binance-code">
+                        邀请码: [此处应填入实际邀请码]
+                    </div>
+                    <p style="font-size: 14px; opacity: 0.9;">或访问: https://www.binance.com/join?ref=[邀请码]</p>
+                    <button class="copy-btn" onclick="copyToClipboard('binance-code')">复制邀请码</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工具和资源 -->
+        <section class="tips-section">
+            <div class="container">
+                <h2>推荐工具和资源</h2>
+                
+                <div class="resource-grid">
+                    <!-- imToken 钱包 -->
+                    <div class="resource-card">
+                        <div class="resource-icon">👛</div>
+                        <h3>imToken 钱包</h3>
+                        <p>自托管加密钱包，支持多链资产管理</p>
+                        <a href="https://token.im" target="_blank" class="resource-link">官方网站</a>
+                    </div>
+
+                    <!-- Trust Wallet -->
+                    <div class="resource-card">
+                        <div class="resource-icon">🔐</div>
+                        <h3>Trust Wallet</h3>
+                        <p>币安官方钱包，支持多币种</p>
+                        <a href="https://trustwallet.com" target="_blank" class="resource-link">官方网站</a>
+                    </div>
+
+                    <!-- MetaMask -->
+                    <div class="resource-card">
+                        <div class="resource-icon">🦊</div>
+                        <h3>MetaMask</h3>
+                        <p>以太坊钱包浏览器扩展</p>
+                        <a href="https://metamask.io" target="_blank" class="resource-link">官方网站</a>
+                    </div>
+
+                    <!-- Ledger 硬件钱包 -->
+                    <div class="resource-card">
+                        <div class="resource-icon">🔒</div>
+                        <h3>Ledger 硬件钱包</h3>
+                        <p>最安全的硬件钱包之一</p>
+                        <a href="https://www.ledger.com" target="_blank" class="resource-link">官方网站</a>
+                    </div>
+
+                    <!-- Trezor 硬件钱包 -->
+                    <div class="resource-card">
+                        <div class="resource-icon">🛡️</div>
+                        <h3>Trezor 硬件钱包</h3>
+                        <p>开源硬件钱包，高度安全</p>
+                        <a href="https://trezor.io" target="_blank" class="resource-link">官方网站</a>
+                    </div>
+
+                    <!-- Chrome 浏览器 -->
+                    <div class="resource-card">
+                        <div class="resource-icon">🌐</div>
+                        <h3>Google Chrome</h3>
+                        <p>下载谷歌浏览器</p>
+                        <a href="https://www.google.com/chrome" target="_blank" class="resource-link">下载</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学习资源 -->
+        <section>
+            <div class="container" style="padding: 60px 0;">
+                <h2 style="text-align: center; font-size: 36px; margin-bottom: 40px; color: var(--secondary-color);">学习资源</h2>
+                
+                <div class="resource-grid">
+                    <!-- CoinDesk -->
+                    <div class="resource-card">
+                        <div class="resource-icon">📰</div>
+                        <h3>CoinDesk</h3>
+                        <p>加密货币新闻和分析</p>
+                        <a href="https://www.coindesk.com" target="_blank" class="resource-link">访问</a>
+                    </div>
+
+                    <!-- Investopedia -->
+                    <div class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <h3>Investopedia</h3>
+                        <p>金融和投资教育</p>
+                        <a href="https://www.investopedia.com/bitcoin" target="_blank" class="resource-link">访问</a>
+                    </div>
+
+                    <!-- Bitcoin.org -->
+                    <div class="resource-card">
+                        <div class="resource-icon">₿</div>
+                        <h3>Bitcoin.org</h3>
+                        <p>比特币官方信息</p>
+                        <a href="https://bitcoin.org/zh_CN" target="_blank" class="resource-link">访问</a>
+                    </div>
+
+                    <!-- Blockchain.com -->
+                    <div class="resource-card">
+                        <div class="resource-icon">⛓️</div>
+                        <h3>Blockchain 浏览器</h3>
+                        <p>查看比特币交易详情</p>
+                        <a href="https://www.blockchain.com/explorer" target="_blank" class="resource-link">访问</a>
+                    </div>
+
+                    <!-- CoinGecko -->
+                    <div class="resource-card">
+                        <div class="resource-icon">📊</div>
+                        <h3>CoinGecko</h3>
+                        <p>加密货币价格和数据</p>
+                        <a href="https://www.coingecko.com" target="_blank" class="resource-link">访问</a>
+                    </div>
+
+                    <!-- CMC -->
+                    <div class="resource-card">
+                        <div class="resource-icon">📈</div>
+                        <h3>CoinMarketCap</h3>
+                        <p>加密货币市场数据</p>
+                        <a href="https://coinmarketcap.com" target="_blank" class="resource-link">访问</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我们 -->
+        <section class="disclaimer-section">
+            <div class="container">
+                <div class="disclaimer-box" style="background: linear-gradient(135deg, #e6fffa 0%, #f0fff4 100%); border-color: var(--success-color);">
+                    <h3 style="color: var(--success-color);">📧 保持联系</h3>
+                    <p>有任何问题或建议？欢迎联系我们：</p>
+                    <ul>
+                        <li>✉️ 邮箱: contact@buybrc.cn</li>
+                        <li>💬 微信: [微信号]</li>
+                        <li>📱 Telegram: [@buybrc]</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 14px;">我们欢迎反馈和建议，帮助我们改进教程。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 中国大陆用户购买比特币教程。仅供学习使用。</p>
+            <p><a href="index.html" style="color: white;">← 返回主页</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent || element.innerText;
+            
+            // 创建临时文本区域
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                document.execCommand('copy');
+                
+                // 获取触发复制的按钮
+                const button = event.target;
+                const originalText = button.textContent;
+                
+                button.textContent = '✓ 已复制！';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                alert('复制失败，请手动复制');
+            }
+            
+            document.body.removeChild(textarea);
+        }
+
+        // 页面加载动画
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.resource-card, .invite-box');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            setTimeout(() => {
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>

@@ -6,15 +6,15 @@
 }
 
 :root {
-    --primary-color: #f7931a;
-    --secondary-color: #1a202c;
-    --accent-color: #4299e1;
-    --success-color: #48bb78;
-    --warning-color: #ed8936;
-    --danger-color: #f56565;
-    --light-bg: #f7fafc;
-    --text-dark: #2d3748;
-    --text-light: #718096;
+    --primary-color: #22c55e;
+    --secondary-color: #1e293b;
+    --accent-color: #3b82f6;
+    --success-color: #22c55e;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --light-bg: #f8fafc;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
     --border-color: #e2e8f0;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -35,7 +35,7 @@ body {
 
 /* ==================== 导航栏 ==================== */
 .navbar {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #2d3748 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #334155 100%);
     color: white;
     padding: 20px 0;
     box-shadow: var(--shadow);
@@ -86,7 +86,7 @@ body {
 
 /* ==================== Hero 部分 ==================== */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
     color: white;
     padding: 60px 0;
     text-align: center;
@@ -150,7 +150,7 @@ body {
 }
 
 .step-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #ff9e1b 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #16a34a 100%);
     color: white;
     padding: 25px;
     display: flex;
@@ -617,13 +617,13 @@ html {
 
 /* ==================== 额外样式 ==================== */
 a {
-    color: var(--accent-color);
+    color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--primary-color);
+    color: #16a34a;
 }
 
 button {

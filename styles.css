@@ -952,3 +952,96 @@ body {
 .mb-lg {
     margin-bottom: var(--spacing-lg);
 }
+
+/* ==================== 响应式设计 ==================== */
+@media (max-width: 768px) {
+    /* 调整基础字体大小 */
+    body {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* 调整导航栏 */
+    .navbar {
+        padding: var(--spacing-sm);
+        position: static; /* 移除粘性定位，避免遮挡 */
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        width: 100%;
+        align-items: stretch; /* 使菜单项水平拉伸 */
+    }
+    
+    .nav-link {
+        text-align: center;
+        padding: 10px;
+        background-color: var(--light-gray);
+    }
+
+    /* 调整 Hero 部分 */
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* 调整章节标题 */
+    .steps-section h2,
+    .tips-section h2,
+    .faq-section h2,
+    .resources-section h2,
+    .page-header h2 {
+        font-size: 28px;
+    }
+
+    /* 调整步骤卡片 */
+    .step-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+
+    .step-content {
+        padding: var(--spacing-md);
+    }
+
+    /* 调整提示网格 */
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* 调整资源卡片 */
+    .resource-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .resource-info {
+        padding-right: 0;
+    }
+    
+    .resource-action {
+        width: 100%;
+        margin-top: var(--spacing-sm);
+    }
+    
+    .btn {
+        width: 100%;
+    }
+
+    /* 调整页脚 */
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+}
